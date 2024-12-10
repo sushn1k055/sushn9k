@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лучшие про игроки в Counter Strike</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function() {
+            // Проверяем, авторизован ли пользователь
+            if(localStorage.getItem("loggedIn") !== "true") {
+                // Если не авторизован, перенаправляем на страницу логина
+                window.location.href = "login.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Лучшие про игроки в Counter Strike</h1>
+        <nav>
+            <a href="login.html">Главная</a>
+            <a href="about.html">О Информационной безопасности</a>
+            <a href="technology.html">Работа безопасности</a>
+            <a href="usecases.html">Почему информационная безопасность важна?</a>
+            <a href="benefits.html">Преимущества</a>
+            <a href="contact.html">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Добро пожаловать в информационную безопасность</h2>
+            <p>Информационная безопасность играет важную роль в мире человека</p>
+            <p><a href="technology.html">Узнайте больше о информационной безопасности</a></p>
+        </section>
+        <section>
+            <h3>Наши особенности</h3>
+            <ul>
+                <li>Доступность</li>
+                <li>Целостность</li>
+                <li>Конфиденциальность</li>
+                <li>Более 5 лет на рынке</li>
+            </ul>
+        </section>
+        <section>
+            <h4>Этапы развитие информационной безопасности</h4>
+            <ul>
+                <li>Оценка стоимости</li>
+                <li>Разработка политики безопасности</li>
+                <li>Реализация политики</li>
+                <li>Квалифицированная подготовка специалистов</li>
+                <li>Аудит</li>
+                
+            </ul>
+    </main>
+
+    <footer>
+        <p>© 2024 Информационная безопасность</p>
+    </footer>
+</body>
+</html>

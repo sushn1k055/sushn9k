@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('registerForm')?.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+
+                if (password !== confirmPassword) {
+                    alert('Пароли не совпадают!');
+                    return;
+                }
+
+                // Сохраняем пользователя в localStorage
+                localStorage.setItem('username', username);
+                localStorage.setItem('password', password);
+
+                alert('Регистрация успешна! Теперь можете войти.');
+
+                // Перенаправление на страницу логина
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="register-container">
+        <h1>Регистрация</h1>
+        <form id="registerForm">
+            <label for="username">Логин:</label>
+            <input type="text" id="username" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" required>
+            <label for="confirmPassword">Подтверждение пароля:</label>
+            <input type="password" id="confirmPassword" required>
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+        <p><a href="index.html">Уже есть аккаунт? Войти</a></p>
+    </div>
+</body>
+</html>
